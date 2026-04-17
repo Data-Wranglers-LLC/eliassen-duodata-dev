@@ -1,4 +1,4 @@
-# Duodata Definitions
+# Duodata Integation Repo
 
 This directory contains the [Duodata](https://duodata.ai) metric definitions for this project. Duodata is an AI-powered metrics layer that establishes a single source of truth for KPIs, then projects them into your data stack (Snowflake, Databricks, BI tools, etc.) as version-controlled semantic models.
 
