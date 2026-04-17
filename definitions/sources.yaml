@@ -1,0 +1,44 @@
+sources:
+  - name: Salesforce Salescloud
+    description: CRM for capturing sales activity
+    type: CRM System
+  - name: Bullhorn for Salesforce
+    description: Staffing CRM system
+    type: CRM System
+  - name: Zoom Calls
+    description: Zoom Meeting User and Video Call Logs
+    type: SaaS
+  - name: OpenAir
+    description: "OpenAir is a Professional Services Automation (PSA) software
+      solution developed by Oracle NetSuite. It's a cloud-based application
+      designed to help professional services organizations manage their entire
+      business operations, particularly those involved in project delivery and
+      client engagements. "
+    type: SaaS
+  - name: Erecruit
+    description: >-
+      eRecruit, which is now part of Bullhorn, is a company that offers
+      recruitment software solutions designed to streamline and automate the
+      hiring process. It offers a suite of products, including: 
+
+      Applicant Tracking System (ATS): This system helps manage the entire
+      recruitment workflow, from job posting to candidate screening, interview
+      scheduling, and reporting. It can also be used for candidate relationship
+      management.
+
+      Recruitment CRM: This feature helps businesses manage interactions with
+      candidates and clients.
+
+      Other modules: eRecruit's offerings include modules for middle office
+      operations, credentialing, vendor management systems (VMS), and
+      onboarding.
+
+      Automation and Analytics: The platform includes tools to automate tasks
+      and provide analytics to help improve the recruitment process. 
+    type: Windows App
+  - name: Kantata for Salesforce
+    description: Professional services PSA
+    type: SaaS
+  - name: Bullhorn One
+    description: The time-tracking SaaS system.
+    type: Time-tracking SaaS

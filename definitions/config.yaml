@@ -1,0 +1,86 @@
+version: "1.0"
+exportDate: 2026-04-16T21:19:31.144Z
+configuration:
+  statuses:
+    - name: Proposed
+      color: "#6E56CF"
+      sort_order: 1
+      description: Drafted definition; awaiting review by business owners.
+    - name: Draft
+      color: "#B1B3B3"
+      sort_order: 1
+      description: Initial stage for new items
+    - name: Reviewed
+      color: "#2D9CDB"
+      sort_order: 2
+      description: Reviewed for business meaning and intended usage.
+    - name: Proposed
+      color: "#7A7C7E"
+      sort_order: 2
+      description: Item has been proposed for review
+    - name: Approved
+      color: "#27AE60"
+      sort_order: 3
+      description: Approved definition; safe for exec reporting and semantic layer use.
+    - name: Approved
+      color: "#00F23D"
+      sort_order: 3
+      description: Item has been approved
+    - name: Implemented
+      color: "#007FFF"
+      sort_order: 4
+      description: Item has been implemented
+    - name: Obsolete
+      color: "#FF5A00"
+      sort_order: 5
+      description: Item is no longer in use
+  periods:
+    - name: Transactional
+      description: Row-level / event-level (line item or order event).
+    - name: Annual
+      description: Once per year
+    - name: Daily
+      description: Aggregated by day.
+    - name: Quarterly
+      description: Four times per year
+    - name: Monthly
+      description: Aggregated by month.
+    - name: Monthly
+      description: Once per month
+    - name: Quarterly
+      description: Aggregated by quarter.
+    - name: Weekly
+      description: Once per week
+    - name: Yearly
+      description: Aggregated by year.
+    - name: Daily
+      description: Once per day
+    - name: Daily (business days)
+      description: Once per business day
+    - name: Hourly
+      description: Once per hour
+    - name: Ongoing
+      description: Continuous updates
+  people:
+    - Daniel Weber (CFO)
+    - Sofia Lang (VP Sales)
+    - Elena Rossi (Head of Pricing)
+    - Marco Stein (Head of Procurement)
+    - Priya Nair (VP Supply Chain)
+    - Luca Bianchi (COO)
+    - Aisha Rahman (Head of Data)
+    - Data Platform Team
+    - Analytics Engineering Team
+    - Luba Levin
+    - John Scott
+    - Ross Karnes
+    - Rob Waddell
+    - Srikanth Varadaraj
+    - Bryan Mull
+  releases:
+    - name: ACME Inc. Executive Dashboard
+      due_date: 2026-05-06
+    - name: ELIASSEN_INFOMART_V1.0
+      due_date: 2025-09-26
+    - name: ELIASSEN_INFOMART_V1.1
+      due_date: 2025-11-14

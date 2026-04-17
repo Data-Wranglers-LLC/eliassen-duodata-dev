@@ -1,0 +1,367 @@
+dimensions:
+  - name: Contact
+    businessId: DIM_CONTACT
+    description: A person within the business entity where talent resources are placed.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo:
+      - Company
+  - name: Position
+    businessId: DIM_POSITION
+    description: Represents open job roles requested by clients. Used to analyze
+      staffing activity by position, including submittals, interviews,
+      placements, and fill rates.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Match
+    businessId: DIM_MATCH
+    description: Represents the link between a candidate and a job position. Used to
+      track and analyze submittals, interviews, offers, and placements, enabling
+      insights into pipeline efficiency and recruiter performance.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo:
+      - Match Phase
+  - name: Segment
+    businessId: DIM_SEGMENT
+    description: Represents the market or client segment classification (e.g.,
+      industry, vertical, or revenue tier). Used to group and analyze
+      performance metrics across different business segments.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - Biometric
+      - CyberSecurity
+      - Framework
+      - Test Automation
+      - Financial Crimes
+      - Portfolio Optimization
+      - Specialty Applications
+      - Emerging Technologies
+      - Operational Accounting and Finance
+      - Agile
+      - Business Program Management
+      - Not Applicable
+      - Cloud Services
+      - Generative AI
+      - Delivery Optimization
+      - Specialized Government Solutions
+      - Enterprise Architecture
+      - Data Analytics
+      - Application Development
+      - Integration
+      - Technology Program Management
+      - Product Optimization
+      - DevOps
+      - Transformation
+      - Data Sciences & Analytics
+      - Engineering
+      - Risk and Compliance
+    rollsUpTo: []
+  - name: HR Representative
+    businessId: DIM_HR_REP
+    description: An HR Representative at a staffing firm is a professional who
+      manages human resources functions both internally for the staffing agency
+      and externally for clients and placed candidates
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Sales Team
+    businessId: SALES_TEAM
+    description: |-
+      Geographic sublocation of Account Executive
+      Note: Multisource-->Bullhorn for Salesforce and Erecruit
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Luba Levin
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo:
+      - Sales Region
+  - name: Sales Visit
+    businessId: DIM_SALES_VISIT
+    description: Represents individual meetings or touchpoints between sales
+      representatives and clients or prospects. Used to analyze sales activity,
+      engagement frequency, and visit outcomes across accounts and time periods.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Sales Region
+    businessId: SALES_REGION
+    description: |-
+      Geographic region for Account Executive
+      Note: Multisource-->Bullhorn for Salesforce and Erecruit
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Luba Levin
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Contact Status
+    businessId: ATTR_CONTACT_STATUS
+    description: Contacts
+    status: Draft
+    businessOwner: null
+    implementationOwner: null
+    source: Salesforce Salescloud
+    release: null
+    values: null
+    rollsUpTo:
+      - Contact
+  - name: Sales Visit Type
+    businessId: null
+    description: Type of Sales Visit
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: John Scott
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - AE - Consultant Meeting
+      - Client - Business Development
+      - Client Visit - Account Management
+      - Client - Engagement/AM
+    rollsUpTo: []
+  - name: User
+    businessId: DIM_USER
+    description: The end users of the Zoom Video Meeting app.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Zoom Calls
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Candidate
+    businessId: DIM_CANDIDATE
+    description: Represents individuals being considered for job placements. Used to
+      track candidate pipeline activity such as submittals, interviews, offers,
+      and hiring outcomes across roles and clients.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Placement
+    businessId: DIM_PLACEMENT
+    description: A Placement represents the successful hiring of a candidate into a
+      client role. It links the candidate, recruiter, and client, and captures
+      key details such as job title, start date, compensation, and status,
+      ensuring visibility into the outcome of the recruiting process.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Account Executive
+    businessId: DIM_AE
+    description: An Account Executive drives new business, manages client
+      relationships, and ensures successful talent placements by aligning client
+      needs with recruiting efforts. It is a User record from Salesforce
+      Salescloud of the type "Account Executive."
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Assigned Recruiter
+    businessId: DIM_AR
+    description: An Assigned Recruiter sources, evaluates, and presents qualified
+      candidates to meet client hiring needs. They collaborate closely with
+      Account Executives to align recruiting strategies with client
+      requirements, manage candidate relationships throughout the hiring
+      process, and ensure successful placements by facilitating smooth
+      communication between clients and talent. It is a User record from
+      Salesforce Salescloud of the type "Assigned Recruiter."
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Lead
+    businessId: DIM_LEAD
+    description: Lead refers to a potential client or business opportunity that
+      could result in a staffing placement or contract
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: null
+    rollsUpTo: []
+  - name: Match Phase
+    businessId: MATCH_PHASE
+    description: Phase of candidate match lifecycle
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - SUBMITTED_TO_AE
+      - SUBMITTED_TO_HM
+      - FIRST_CLIENT_INTERVIEW
+    rollsUpTo: []
+  - name: Domain
+    businessId: DIM_DOMAIN
+    description: Represents the internal business domain or service area (e.g.,
+      Finance, Healthcare, Technology) associated with a client or position.
+      Used to segment and analyze performance across industry verticals or
+      practice areas.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - Accounting Risk and Advisory
+    rollsUpTo: []
+  - name: Timesheet
+    businessId: DIM_TIMESHEET
+    description: null
+    status: Draft
+    businessOwner: null
+    implementationOwner: null
+    source: Bullhorn One
+    release: null
+    values: []
+    rollsUpTo: []
+  - name: Zoom Phone Call
+    businessId: ZOOM_PHONE_CALL
+    description: Video or audio phone calls logged in Zoom Meetings
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Zoom Calls
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo: []
+  - name: Hourly Contract Type
+    businessId: HRLY_CONTRACT_TYPE
+    description: Consulting and Talent hourly contract type
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - Consulting
+      - Talent
+    rollsUpTo: []
+  - name: Record Type
+    businessId: RECORD_TYPE
+    description: Type of revenue based on placement/time and materials
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - Consulting
+      - Permament
+      - Contract
+      - Contract To Hire
+    rollsUpTo: []
+  - name: Division
+    businessId: DIVISION
+    description: Industry of client company
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: John Scott
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    values:
+      - Technology Solutions
+      - Clinical Solutions
+      - Risk & Compliance
+      - Legacy
+    rollsUpTo: []
+  - name: Parent Company
+    businessId: PARENT_COMPANY
+    description: Parent business entity that is a past, active, or potential client
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo: []
+  - name: Company
+    businessId: DIM_COMPANY
+    description: Business entity that is a past, active, or potential client
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo:
+      - Parent Company
+  - name: Time Period - Day
+    businessId: TIME_PERIOD_DAY
+    description: This is all the dates of the calendar with the scoped time frame.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo:
+      - Time Period - Week
+      - Time Period - Month
+  - name: Time Period - Month
+    businessId: TIME_PERIOD_MONTH
+    description: This is the individual months of each year within the scoped date range.
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo: []
+  - name: Time Period - Week
+    businessId: TIME_PERIOD_WEEK
+    description: This is the European Week (Monday through Sunday) for each year in
+      the scoped date range. (To be added - dod partial weeks count a numnered
+      weeks?)
+    status: Draft
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    values: []
+    rollsUpTo: []

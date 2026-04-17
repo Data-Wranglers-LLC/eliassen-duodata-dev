@@ -1,0 +1,463 @@
+reports:
+  - name: Power BI Weekly Flash
+    businessId: PWRBI_WEEKLY_FLASH
+    description: Power BI dashboard of match counts per phase and [dimensions]
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Luba Levin
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Matches Submitted to Account Executive
+      - Zoom Phone Call Duration
+      - Zoom Phone Calls
+      - Client Visits Set
+      - Client Visits Set
+    dimensions:
+      - Division
+      - Match
+      - Account Executive
+      - Position
+      - Contact
+      - Company
+      - Candidate
+      - Lead
+      - User
+      - Segment
+      - Sales Visit
+      - Match Phase
+  - name: rpt_reqs
+    businessId: RPT_REQS
+    description: Requisition pipeline report tracking qualified and closed reqs by
+      position, company, recruiter, and account executive.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Qualified Reqs
+      - Closed Reqs
+    dimensions:
+      - Position
+      - Record Type
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_placement
+    businessId: RPT_PLACEMENT
+    description: Placement activity report tracking starts, stops, deals, and
+      fall-offs across contract, consulting, and permanent placements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Starts Contract
+      - Starts Consulting
+      - Starts Permanent
+      - Starts Total
+      - Stops Contract
+      - Stops Consulting
+      - Total Stops
+      - Deals
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_match
+    businessId: RPT_MATCH
+    description: Match pipeline report tracking submittals to AE, submittals to
+      client, and first interview counts.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Matches Submitted to Account Executive
+      - Matches Submitted to Client
+      - Matches Submitted for First Interview
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_client_visits
+    businessId: RPT_CLIENT_VISITS
+    description: Client visit activity report tracking scheduled and completed
+      visits by account executive, company, and contact.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Number of Scheduled Client Visits
+      - Client Visits Completed
+      - Client Visits Set
+    dimensions:
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - HR Representative
+      - Lead
+      - Division
+      - Time Period - Day
+  - name: rpt_phone_calls
+    businessId: RPT_PHONE_CALLS
+    description: Zoom phone call activity report tracking call counts and duration
+      by account executive.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Zoom Phone Calls
+      - Zoom Phone Call Duration
+    dimensions:
+      - Account Executive
+      - Time Period - Day
+  - name: rpt_er_timesheets
+    businessId: RPT_ER_TIMESHEETS
+    description: Erecruit timesheet report tracking revenue, discounted revenue,
+      cost, hours billed, and spread for contract and consulting placements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Full Revenue - Contracts & Consulting from Erecruit
+      - Discounted Revenue - Contract & Consulting from Erecruit
+      - Discount Amount - Contracts & Consulting from Erecruit
+      - Discount Rate - Contract & Consulting from Erecruit
+      - Hours Billed - Contract & Consulting from Erecruit
+      - Cost - Contracts & Consulting from Erecruit
+      - Loaded Cost - Contracts & Consulting from Erecruit
+      - Spread - Contracts & Consulting from Erecruit
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - Placement
+      - Position
+      - Timesheet
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_er_perm
+    businessId: RPT_ER_PERM
+    description: Erecruit permanent placement report tracking revenue and spread for
+      direct hire placements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Full Revenue - Permanent Placements from Erecruit
+      - Spread - Permanent Placements from Erecruit
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Timesheet
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_bh1_timesheets
+    businessId: RPT_BH1_TIMESHEETS
+    description: Bullhorn One timesheet report tracking revenue, discounted revenue,
+      discount amount, hours billed, cost, loaded cost, and spread for contract
+      and consulting placements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Full Revenue - Contracts & Consulting from Bullhorn One
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+      - Discount Amount - Contracts & Consulting from Bullhorn One
+      - Discount Rate - Contract & Consulting from Bullhorn One
+      - Hours Billed - Contract & Consulting from Bullhorn One
+      - Cost - Contracts & Consulting from Bullhorn One
+      - Loaded Cost - Contracts & Consulting from Bullhorn One
+      - Burden - Contracts & Consulting from Bullhorn One
+      - Spread - Contracts & Consulting from Bullhorn One
+      - Pay Amount - Contract Hourly Bullhorn One
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_bh1_perm
+    businessId: RPT_BH1_PERM
+    description: Bullhorn One permanent placement report tracking revenue and spread
+      for direct hire placements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Full Revenue - Permanent Placements from Bullhorn One
+      - Spread - Permanent Placements from Bullhorn One
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Account Executive
+      - Assigned Recruiter
+      - Placement
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_kantata_performance_analysis
+    businessId: RPT_KANTATA_PERFORMANCE_ANALYSIS
+    description: Kantata performance analysis report tracking P1 revenue, cost,
+      spread, and resource usage for project engagements.
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Full Revenue - P1
+      - Discounted Revenue - P1
+      - Cost - P1
+      - Spread - P1 Monthly
+      - Hours Billed - Resource Usage from Kantata
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Account Executive
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Day
+  - name: rpt_weekly_financials
+    businessId: RPT_WEEKLY_FINANCIALS
+    description: Consolidated weekly financial report aggregating revenue, cost,
+      spread, and hours billed across all sources.
+    status: Draft
+    refreshPeriod: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Consolidated Revenue - Weekly
+      - Consolidated Cost - Weekly
+      - Consolidated Spread - Weekly
+      - Consolidated Hours Billed - Weekly
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Account Executive
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Week
+  - name: rpt_monthly_financials
+    businessId: RPT_MONTHLY_FINANCIALS
+    description: Consolidated monthly financial report aggregating revenue, cost,
+      spread, and hours billed across all sources.
+    status: Draft
+    refreshPeriod: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Consolidated Revenue - Monthly
+      - Consolidated Cost - Monthly
+      - Consolidated Spread - Monthly
+      - Consolidated Hours Billed - Monthly
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Account Executive
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Month
+  - name: rpt_monthly_headcount
+    businessId: RPT_MONTHLY_HEADCOUNT
+    description: Monthly headcount report tracking starting and ending headcount for
+      contract, consulting, and total across all dimensions.
+    status: Draft
+    refreshPeriod: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Starting Headcount Contract - Monthly
+      - Ending Headcount Contract - Monthly
+      - Starting Headcount Consulting - Monthly
+      - Ending Headcount Consulting - Monthly
+      - Starting Headcount Total - Monthly
+      - Ending Headcount Total - Monthly
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Month
+  - name: rpt_monthly_utilization
+    businessId: RPT_MONTHLY_UTILIZATION
+    description: Monthly utilization report tracking expected hours and forecast
+      utilization included usage from Kantata.
+    status: Draft
+    refreshPeriod: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Expected Hours - Weekly
+      - "P1 Forecast Utilization Included Usage -  Weekly "
+    dimensions:
+      - Candidate
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Month
+  - name: rpt_weekly_headcount
+    businessId: RPT_WEEKLY_HEADCOUNT
+    description: Weekly headcount report tracking starting and ending headcount for
+      contract and consulting on a European week basis.
+    status: Draft
+    refreshPeriod: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Starting Headcount Contract - Weekly
+    dimensions:
+      - Candidate
+      - Company
+      - Parent Company
+      - Contact
+      - Account Executive
+      - Assigned Recruiter
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Record Type
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Week
+  - name: rpt_weekly_utilization
+    businessId: RPT_WEEKLY_UTILIZATION
+    description: Weekly utilization report tracking actual and forecast resource
+      usage delivery and hours from Kantata.
+    status: Draft
+    refreshPeriod: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Actual Resource Usage Delivery - Weekly
+      - Actual Resource Usage Delivery Hours - Weekly
+      - P1 Forecast Delivery Hours - Weekly
+      - P1 Forecast Resource Usage Delivery - Weekly
+    dimensions:
+      - Candidate
+      - Division
+      - Domain
+      - Segment
+      - Time Period - Week
+  - name: rpt_zoom_phone_calls_daily
+    businessId: ZOOM_PHONE_CALLS_DAILY
+    description: "This report captures the daily phone calls recorded in the zoom
+      phone call source system. These calls relate to account managers' client
+      activity for existing and new business. "
+    status: Draft
+    refreshPeriod: Daily
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    release: ELIASSEN_INFOMART_V1.0
+    metrics:
+      - Zoom Phone Calls
+      - Zoom Phone Call Duration
+    dimensions:
+      - User
+      - Time Period - Day
+      - Zoom Phone Call

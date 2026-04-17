@@ -1,0 +1,2475 @@
+metrics:
+  - name: P1 Forecast Resource Usage Delivery - Weekly
+    businessId: P1_FORECAST_RESOURCE_USAGE_DELIVERY_WEEKLY
+    description: Number of days a resource is forecasted to work on a given week for
+      projects that are closed/won or ninety-nine percent agreed upon
+    unit: day
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - P1 Utilization Percentage - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Untitled Metric
+    businessId: null
+    description: null
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Untitled Metric
+    businessId: null
+    description: null
+    unit: null
+    status: Draft
+    period: Annual
+    businessOwner: null
+    implementationOwner: null
+    source: Bullhorn for Salesforce
+    release: null
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Hours Billed - Fixed Fee Weekly
+    businessId: HOURS_BILLED_FIXED_FEE_WEEKLY
+    description: The number of weekly hours billed to the client account for fixed
+      fee projects recorded in Kantata. Fixed fee monthly hours billed divided
+      by the number of weeks in the given month.
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(HOURS_BILLED_RESOURCE_USAGE)
+      variables:
+        - Hours Billed - Resource Usage from Kantata
+      expressionAst:
+        id: 1bcefb96-ef83-4b0b-91ec-194c287ce034
+        type: root
+        value: root
+        children:
+          - id: ef0a6fe9-086f-4373-8eab-e0b5ac132f0a
+            type: function
+            value: SUM
+            children:
+              - id: ac7db265-a826-4715-a299-3b784bb852cb
+                type: metric
+                value: Hours Billed - Resource Usage from Kantata
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Hours Billed - Resource Usage from Kantata
+    downstreamMetrics:
+      - Consolidated Hours Billed - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Stops Consulting
+    businessId: STOPS_CONSULTING
+    description: null
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: null
+    implementationOwner: null
+    source: Bullhorn for Salesforce
+    release: null
+    formula: null
+    dimensions:
+      - Company
+      - Candidate
+      - Assigned Recruiter
+      - Assigned Recruiter
+      - Account Executive
+      - Account Executive
+      - Contact
+      - Division
+      - Domain
+      - Domain
+      - HR Representative
+      - HR Representative
+      - Match
+      - Match
+      - Placement
+      - Placement
+      - Position
+      - Segment
+      - Segment
+      - Time Period - Day
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discounted Revenue - P1
+    businessId: DISC_REVENUE_P1
+    description: The total income generated from providing staffing services and
+      consulting engagements to clients after discount is applied. It includes
+      all billings for the placement of temporary or contract staff, permanent
+      hires (placement fees), and fees for professional consulting services
+      delivered from Kantata for Salesforce
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Revenue - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue Time & Materials - Weekly
+    businessId: FULL_REVENUE_TM_WEEKLY
+    description: Weekly revenue from time and materials projects in Kantata source
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Deals
+    businessId: DEALS
+    description: Number of closing reports with a created in the period.
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Zoom Phone Call Duration
+    businessId: ZOOM_PHONE_CALL_DURATION
+    description: The duration of a call captured in the Zoom Meetings
+    unit: minute
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Zoom Calls
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - User
+      - Zoom Phone Call
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discounted Revenue -Time & Materials Weekly
+    businessId: DISC_REVENUE_TM_WEEKLY
+    description: Weekly revenue after discount from time and materials projects as
+      recorded in timesheets in Kantata source
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Revenue - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Actual Resource Usage Delivery - Weekly
+    businessId: ACTUAL_RESOURCE_USAGE_DELIVERY_WEEKLY
+    description: Actual days that resource have entered in time entry on a weekly basis
+    unit: day
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - "Actual Utilization Percentage - Weekly "
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Matches Submitted to Client
+    businessId: MATCHES_SUBMITTED_CLIENT
+    description: Number of matches that progressed to the Hiring Manager at the Client
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Permanent Placements from Erecruit
+    businessId: FULL_REVENUE_PERM_ER
+    description: The total income generated from permanent placements in Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: null
+    implementationOwner: null
+    source: Erecruit
+    release: null
+    formula: null
+    dimensions:
+      - Company
+      - Candidate
+      - Contact
+      - Position
+      - Match
+      - Segment
+      - Account Executive
+      - Assigned Recruiter
+      - Placement
+      - Domain
+      - Record Type
+      - Division
+      - Parent Company
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Revenue - Monthly
+      - Consolidated Revenue - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starts Permanent
+    businessId: STARTS_PERMANENT
+    description: Number of direct hire closing reports with a start date in that period
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Starts Total
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - P1
+    businessId: FULL_REVENUE_P1
+    description: Full forecasted revenue before discount for engagements classified
+      as “Firm” (100% probability) from Kantata source
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discount Rate - Contract & Consulting from Bullhorn One
+    businessId: DISC_RATE_BH1
+    description: The percent discount on placement billing per customer per bill
+      hour from Bullhorn One
+    unit: "%"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discount Amount - Contracts & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Client Visits Completed
+    businessId: CLIENT_VISITS_COMPLETED
+    description: Number of completed sales meetings with an existing or potential Client
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Permanent Placements from Bullhorn One
+    businessId: FULL_REVENUE_PERM_BH1
+    description: The total income generated from permanent placements in Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Revenue - Monthly
+      - Consolidated Revenue - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Contracts & Consulting from Erecruit
+    businessId: FULL_REVENUE_CONTRACTS_CONSULTING_ER
+    description: Revenue before discount, inclusive of Talent and Consulting from
+      Erecruit source
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: null
+    implementationOwner: null
+    source: Erecruit
+    release: null
+    formula: null
+    dimensions:
+      - Candidate
+      - Contact
+      - Position
+      - Match
+      - Segment
+      - Placement
+      - Account Executive
+      - Assigned Recruiter
+      - Domain
+      - Record Type
+      - Division
+      - Parent Company
+      - Company
+      - Timesheet
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Erecruit
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Contract & Consulting Monthly
+    businessId: FULL_REVENUE_CONTRACT_CONSULTING_MONTHLY
+    description: The total income generated from providing staffing services and
+      consulting engagements to clients. It includes all billings for the
+      placement of contract and consulting staff, permanent hires
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Record Type
+      - Company
+      - Candidate
+      - Segment
+      - Account Executive
+      - Domain
+      - Division
+      - Parent Company
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discount Amount
+      - Discounted Revenue
+    impactedMetrics:
+      - Discounted Revenue
+    impactingMetrics: []
+  - name: Number of Scheduled Client Visits
+    businessId: VISIT_SCHED
+    description: Represents one client encounter that has been officially scheduled
+      within a given time period. The appointment has been scheduled in
+      Salesforce with a confirmed date and time.
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Sales Visit
+      - Account Executive
+      - Company
+      - Contact
+      - HR Representative
+      - Lead
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Hours Billed - Resource Usage from Kantata
+    businessId: HOURS_BILLED_RESOURCE_USAGE
+    description: The number of hours billed to the client account for fixed fee and
+      time and materials projects recorded in Kantata
+    unit: hour
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Luba Levin
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Hours Billed - Fixed Fee Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Zoom Phone Calls
+    businessId: ZOOM_PHONE_CALLS
+    description: Number of phone calls logged in Zoom Meetings
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Zoom Calls
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - User
+      - Zoom Phone Call
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Contracts & Consulting from Bullhorn One
+    businessId: FULL_REVENUE_CONTRACTS_CONSULTING_BH1
+    description: Revenue before discount, inclusive of Talent and Consulting from
+      Bullhorn One source
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Company
+      - Contact
+      - Assigned Recruiter
+      - Account Executive
+      - Position
+      - Match
+      - Placement
+      - Timesheet
+      - Record Type
+      - Parent Company
+      - Candidate
+      - Segment
+      - Division
+      - Domain
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discount Amount - Contracts & Consulting from Bullhorn One
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discount Rate - Contract & Consulting from Erecruit
+    businessId: DISC_RATE_ER
+    description: The percent discount on placement billing per customer per bill
+      hour from Erecruit
+    unit: "%"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discount Amount
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Permanent Placements from Erecruit
+    businessId: SPREAD_PERM_ER
+    description: Profit margin from discounted revenue in Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue Fixed Fee - Monthly
+    businessId: FIXED_FEE_MONTHLY
+    description: "Fixed Fee project revenue monthly. This is derived from P1
+      revenue. Filtered by type of project: "
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Full Revenue - Fixed Fee Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Time & Materials Weekly
+    businessId: SPREAD_TM_WEEKLY
+    description: Weekly spread from time and materials projects in Kantata source
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Hours Billed - Contract & Consulting from Erecruit
+    businessId: HOURS_BILLED_ER
+    description: The number of hours billed for contract and consulting to the
+      client account recorded in Erecruit
+    unit: hour
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Timesheet
+      - Placement
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Hours Billed - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Hours Billed - Contract & Consulting from Bullhorn One
+    businessId: HOURS_BILLED_BH1
+    description: The number of hours billed for contract and consulting to the
+      client account recorded in Bullhorn One
+    unit: hour
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Timesheet
+      - Placement
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Hours Billed - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Pay Amount - Contract Hourly Bullhorn One
+    businessId: PAY_AMT_CONTRACT_HRLY_BH1
+    description: Amount paid to placed resource record in Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Cost - Contracts & Consulting from Bullhorn One
+    businessId: COST_CONTRACTS_CONSULTING_BH1
+    description: Amount paid to talent resource before any overhead expenses from
+      Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Cost - Monthly
+      - Loaded Cost - Contracts & Consulting from Bullhorn One
+      - Consolidated Cost - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Cost - P1
+    businessId: COST_P1
+    description: Cost for engagements classified as “Firm” (100% probability) from
+      Kantata source
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Cost - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Hours Billed - Time & Materials Weekly
+    businessId: HOURS_BILLED_TIME_MATERIALS_WEELKLY
+    description: The number of weekly hours billed to the client account for time
+      and material projects recorded in Kantata
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Hours Billed - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Cost - Time & Materials Weekly
+    businessId: COST_TIME_MATERIALS_WEEKLY
+    description: Weekly cost for time and materials projects from Kantata source
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Cost - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Permanent Placements from Bullhorn One
+    businessId: SPREAD_PERM_BH1
+    description: Profit margin from discounted revenue in Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Cost - Contracts & Consulting from Erecruit
+    businessId: COST_CONTRACTS_CONSULTING_ER
+    description: Amount paid to talent resource before any overhead expenses from Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Cost - Monthly
+      - Consolidated Cost - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discount Amount - Contracts & Consulting from Erecruit
+    businessId: DISC_AMOUNT_CONTRACTS_CONSULTING_ER
+    description: The reduction applied to the standard bill rate or service fee
+      charged to a client. It represents the monetary value subtracted from the
+      agency’s normal charges for staffing placements or consulting services,
+      typically granted as part of a negotiated agreement, volume commitment, or
+      special client arrangement, recorded in Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Erecruit
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Loaded Cost - Contracts & Consulting from Erecruit
+    businessId: LOADED_COST_CONTRACTS_CONSULTING_ER
+    description: Loaded cost is the combined total of an employee’s direct wages
+      plus all associated burden—such as payroll taxes, workers’ compensation,
+      and statutory expenses—representing the true fully loaded labor cost for
+      staffing operations from Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Burden - Contracts & Consulting from Bullhorn One
+    businessId: BURDEN_CONTRACTS_CONSULTING_BH1
+    description: Burden represents the total employer-incurred costs beyond
+      wages—including payroll taxes, workers’ compensation, statutory expenses,
+      equipment, etc.—used to determine the true labor cost from Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Loaded Cost - Contracts & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Fixed Fee Monthly
+    businessId: SPREAD_FIXED_FEE_MONTHLY
+    description: Monthly profit margin—calculated as discounted revenue minus
+      cost—measures the true financial gain from fixed fee engagements from
+      Kantata. This is derived from P1 monthly spread.
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Spread - Fixed Fee Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Contracts & Consulting from Erecruit
+    businessId: SPREAD_CONTRACTS_CONSULTING_ER
+    description: Profit margin—calculated as discounted revenue minus loaded
+      cost—measures the true financial gain from staffing placements by showing
+      how much value remains after covering all fully loaded labor expenses from
+      Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - P1 Monthly
+    businessId: SPREAD_P1_MONTHLY
+    description: Monthly profit margin—calculated as discounted revenue minus
+      cost—measures the true financial gain from projects, fixed fee, and time &
+      materials engagements from Kantata
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starting Headcount Contract - Weekly
+    businessId: STARTING_HEADCOUNT_CONTRACT_WEEKLY
+    description: null
+    unit: null
+    status: Draft
+    period: Weekly
+    businessOwner: null
+    implementationOwner: null
+    source: Bullhorn for Salesforce
+    release: null
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Qualified Reqs
+    businessId: QUALIFIED_REQ
+    description: Number of job openings that were marked as qualified (A or B)
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Position
+      - Position
+      - HR Representative
+      - Domain
+      - Division
+      - Segment
+      - Time Period - Day
+      - Time Period - Day
+      - Assigned Recruiter
+      - Position
+      - Time Period - Day
+      - Account Executive
+      - Position
+      - Time Period - Day
+      - Account Executive
+      - Position
+      - Time Period - Day
+      - Company
+      - Company
+      - Position
+      - Time Period - Day
+      - Contact
+      - Contact
+      - Record Type
+      - Position
+      - Time Period - Day
+      - Record Type
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starts Contract
+    businessId: STARTS_CONTRACT
+    description: Number of contract closing reports with a start date in the period
+      (excludes direct hire and fall offs); Part-Time is counted as 0.5.
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Starts Total
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Stops Contract
+    businessId: STOPS_CONTRACT
+    description: Number of contract closing reports with an actual end date in that
+      period (excludes direct hire and fall offs); Part-Time is counted as 0.5.
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Matches Submitted to Account Executive
+    businessId: MATCHES_SUBMITTED_AE
+    description: The number of matches that progressed to the Job Owner (Account Executive)
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Match
+      - Division
+      - Company
+      - Contact
+      - Account Executive
+      - Lead
+      - Match Phase
+      - Candidate
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Closed Reqs
+    businessId: CLOSED_REQS
+    description: Number of Jobs closed inclusive of all openings  with a A, B, or C Grade
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Account Executive
+      - Assigned Recruiter
+      - Assigned Recruiter
+      - Company
+      - Company
+      - Contact
+      - Division
+      - Domain
+      - HR Representative
+      - Position
+      - Record Type
+      - Record Type
+      - Time Period - Day
+      - Segment
+      - Segment
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Actual Resource Usage Delivery Hours - Weekly
+    businessId: ACTUAL_RESOURCE_USAGE_DELIVERY_HOURS_WEEKLY
+    description: Actual hours that resource have entered in time entry on a weekly
+      basis. This value is captured week-to-date. This is filtered by Period
+      Type.
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Ending Headcount Contract - Monthly
+    businessId: ENDING_HEADCOUNT_CONTRACT_MONTHLY
+    description: The number of active contract closing reports on the last day of
+      the month (excludes direct hire and fall offs); Part-Time is counted as
+      0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Ending Headcount Total - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starting Headcount Consulting - Monthly
+    businessId: STARTING_HEADCOUNT_CONSULTING_MONTHLY
+    description: The number of active consulting closing reports on the first day of
+      the month (excludes direct hire and fall offs); Part-Time is counted as
+      0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Starting Headcount Total - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starting Headcount Contract - Monthly
+    businessId: STARTING_HEADCOUNT_CONTRACT_MONTHLY
+    description: The number of active contract closing reports on the first day of
+      the month (excludes direct hire and fall offs); Part-Time is counted as
+      0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Starting Headcount Total - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Ending Headcount Consulting - Monthly
+    businessId: ENDING_HEADCOUNT_CONSULTING_MONTHLY
+    description: The number of active consulting closing reports on the last day of
+      the month (excludes direct hire and fall offs); Part-Time is counted as
+      0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Ending Headcount Total - Monthly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Expected Hours - Weekly
+    businessId: EXPECTED_HOURS_WEEKLY
+    description: Number of hours a resource is expected to work in a given week plus
+      holidays and PTO
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - P1 Efficiency Percentage - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starts Consulting
+    businessId: STARTS_CONSULTING
+    description: Number of consulting closing reports with a start date in the
+      period (excludes direct hire and fall offs); Part-Time is counted as 0.5.
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Account Executive
+      - Account Executive
+      - Assigned Recruiter
+      - Candidate
+      - Contact
+      - Division
+      - Division
+      - Domain
+      - Domain
+      - HR Representative
+      - Placement
+      - Placement
+      - Match
+      - Match
+      - Segment
+      - Segment
+      - Time Period - Day
+      - Time Period - Day
+      - Match
+      - Segment
+      - Placement
+      - Account Executive
+      - Domain
+      - Division
+      - Time Period - Day
+      - Company
+      - Company
+      - Position
+      - Match
+      - Match
+      - Segment
+      - Segment
+      - Placement
+      - Placement
+      - Account Executive
+      - Account Executive
+      - Domain
+      - Domain
+      - Division
+      - Division
+      - Company
+      - Time Period - Day
+      - Time Period - Day
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Starts Total
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Matches Submitted for First Interview
+    businessId: MATCHES_SUBMITTED_FIRST_INTERVIEW
+    description: "Number of matches that progressed to the first Client Interview
+
+      \ "
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: P1 Forecast Delivery Hours - Weekly
+    businessId: P1_FORECAST_DELIVERY_HOURS_WEEKLY
+    description: Amount of hours a resource is forecasted to work on a given week
+      for projects that are closed/won or ninety-nine percent agreed upon
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - P1 Efficiency Percentage - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: "P1 Forecast Utilization Included Usage -  Weekly "
+    businessId: P1_FORECAST_UTILIZATION__INCLUDED_USAGE_WEEKLY
+    description: Number of days a resource is expected to work in a given week minus
+      holidays and PTO
+    unit: "#"
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - "Actual Utilization Percentage - Weekly "
+      - P1 Utilization Percentage - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Client Visits Set
+    businessId: CLIENT_VISITS_SET
+    description: Number of scheduled sales meetings with an existing or potential Client
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Salesforce Salescloud
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Sales Visit
+      - User
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discount Amount - Contracts & Consulting from Bullhorn One
+    businessId: DISC_AMOUNT_CONTRACTS_CONSULTING_BH1
+    description: The reduction applied to the standard bill rate or service fee
+      charged to a client. It represents the monetary value subtracted from the
+      agency’s normal charges for staffing placements or consulting services,
+      typically granted as part of a negotiated agreement, volume commitment, or
+      special client arrangement, recorded in Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Srikanth Varadaraj
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: FULL_REVENUE_CONTRACTS_CONSULTING_BH1 * DISC_RATE_BH1
+      variables:
+        - Full Revenue - Contracts & Consulting from Bullhorn One
+        - Discount Rate - Contract & Consulting from Bullhorn One
+      expressionAst:
+        id: 5dbe7fe0-ec8c-460a-9190-35ec07f4abc1
+        type: root
+        value: root
+        children:
+          - id: 24760637-2245-4d66-a37d-b3f1d98e1005
+            type: metric
+            value: Full Revenue - Contracts & Consulting from Bullhorn One
+            children: []
+          - id: 387c7b7f-e9a9-4add-a3e7-530632f226dd
+            type: operator
+            value: "*"
+            children: []
+          - id: b043f940-b90c-4d2e-9289-e84c5d0862d0
+            type: metric
+            value: Discount Rate - Contract & Consulting from Bullhorn One
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue - Contracts & Consulting from Bullhorn One
+      - Discount Rate - Contract & Consulting from Bullhorn One
+    downstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discount Amount
+    businessId: DISC_AMOUNT
+    description: The reduction applied to the standard bill rate or service fee
+      charged to a client. It represents the monetary value subtracted from the
+      agency’s normal charges for staffing placements or consulting services,
+      typically granted as part of a negotiated agreement, volume commitment, or
+      special client arrangement.
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: REV_BEFORE_DISC * DISC_RATE
+      variables:
+        - Full Revenue - Contract & Consulting Monthly
+        - Discount Rate - Contract & Consulting from Erecruit
+      expressionAst:
+        id: cd83f17a-4d27-4756-a92d-73d2035c2263
+        type: root
+        value: root
+        children:
+          - id: 14e70de1-85e2-4172-8897-b01131370edf
+            type: metric
+            value: Full Revenue - Contract & Consulting Monthly
+            children: []
+          - id: c01703dc-3878-4b43-8abf-1d76eee900bd
+            type: operator
+            value: "*"
+            children: []
+          - id: dbdcf9fd-8643-4f64-87ec-f01ba0477254
+            type: metric
+            value: Discount Rate - Contract & Consulting from Erecruit
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue - Contract & Consulting Monthly
+      - Discount Rate - Contract & Consulting from Erecruit
+    downstreamMetrics:
+      - Discounted Revenue
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Full Revenue - Fixed Fee Weekly
+    businessId: FULL_REVENUE_FIXED_FEE_WEEKLY
+    description: Fixed Fee project revenue weekly. Fixed fee monthly revenue divided
+      by the number of weeks in the given month.
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(FIXED_FEE_MONTHLY)
+      variables:
+        - Full Revenue Fixed Fee - Monthly
+      expressionAst:
+        id: 7267aabd-2a0f-4fd4-b7e6-5b4b38e71e1d
+        type: root
+        value: root
+        children:
+          - id: e804f2a8-7eb1-4ffb-b5f4-d1f28d227cb7
+            type: function
+            value: ""
+            children:
+              - id: 4ca89a74-6f32-4af9-b639-e0f4ee917a87
+                type: metric
+                value: Full Revenue Fixed Fee - Monthly
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue Fixed Fee - Monthly
+    downstreamMetrics:
+      - Consolidated Revenue - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Hours Billed - Monthly
+    businessId: CONSOLIDATED_HOURS_BILLED_MONTHLY
+    description: The total number of hours billed monthly to client accounts
+    unit: hour
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Cost - Fixed Fee Weekly
+    businessId: COST_FIXED_FEE_WEEKLY
+    description: Weekly cost for fixed fee projects from Kantata source
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics:
+      - Consolidated Cost - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Cost - Monthly
+    businessId: CONSOLIDATED_COST_MONTHLY
+    description: Total monthly cost for contract and consulting, fixed fee, and time
+      and materials engagements.
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(COST_CONTRACTS_CONSULTING_BH1, COST_CONTRACTS_CONSULTING_ER, COST_P1)
+      variables:
+        - Cost - Contracts & Consulting from Bullhorn One
+        - Cost - Contracts & Consulting from Erecruit
+        - Cost - P1
+      expressionAst:
+        id: 011483e9-5e1a-4fa9-9bac-7525767e64b3
+        type: root
+        value: root
+        children:
+          - id: ef2df196-4011-4720-ba65-bef164ee94ef
+            type: function
+            value: SUM
+            children:
+              - id: 8f3a4533-d94c-48e7-abf3-9db4954abf0e
+                type: metric
+                value: Cost - Contracts & Consulting from Bullhorn One
+                children: []
+              - id: b32ce01b-6a27-455d-9b9f-91b6c77022fd
+                type: metric
+                value: Cost - Contracts & Consulting from Erecruit
+                children: []
+              - id: eba5833f-c0be-4cea-a548-1c9d90ed100e
+                type: metric
+                value: Cost - P1
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Cost - Contracts & Consulting from Bullhorn One
+      - Cost - Contracts & Consulting from Erecruit
+      - Cost - P1
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discounted Revenue - Contract & Consulting from Erecruit
+    businessId: DISC_REVENUE_CONTRACT_CONSULTING_ER
+    description: The total income generated from providing staffing services and
+      consulting engagements to clients after discount is applied. It includes
+      all billings for the placement of temporary or contract staff, permanent
+      hires (placement fees), and fees for professional consulting services
+      delivered from Erecruit
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Erecruit
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: FULL_REVENUE_CONTRACTS_CONSULTING_ER -
+        DISC_AMOUNT_CONTRACTS_CONSULTING_ER
+      variables:
+        - Full Revenue - Contracts & Consulting from Erecruit
+        - Discount Amount - Contracts & Consulting from Erecruit
+      expressionAst:
+        id: 145ab2c7-e8e0-44e3-980c-c4d8a2f9d78a
+        type: root
+        value: root
+        children:
+          - id: 1c84ca70-cf88-4aa0-80f4-5f4899f416d1
+            type: metric
+            value: Full Revenue - Contracts & Consulting from Erecruit
+            children: []
+          - id: df390e96-171e-4464-b370-062b3f5855fb
+            type: operator
+            value: "-"
+            children: []
+          - id: 7e5cc0ed-44e7-436e-9e98-fa57f1b4caf2
+            type: metric
+            value: Discount Amount - Contracts & Consulting from Erecruit
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue - Contracts & Consulting from Erecruit
+      - Discount Amount - Contracts & Consulting from Erecruit
+    downstreamMetrics:
+      - Consolidated Revenue - Monthly
+      - Consolidated Revenue - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Loaded Cost - Contracts & Consulting from Bullhorn One
+    businessId: LOADED_COST_CONTRACTS_CONSULTING_BH1
+    description: Loaded cost is the combined total of an employee’s direct wages
+      plus all associated burden—such as payroll taxes, workers’ compensation,
+      and statutory expenses—representing the true fully loaded labor cost for
+      staffing operations from Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: COST_CONTRACTS_CONSULTING_BH1 + BURDEN_CONTRACTS_CONSULTING_BH1
+      variables:
+        - Cost - Contracts & Consulting from Bullhorn One
+        - Burden - Contracts & Consulting from Bullhorn One
+      expressionAst:
+        id: 641c63fb-9275-49f7-a36c-68d96496a1a0
+        type: root
+        value: root
+        children:
+          - id: 253305a5-03ca-4671-b43a-19068d55eef5
+            type: metric
+            value: Cost - Contracts & Consulting from Bullhorn One
+            children: []
+          - id: 7927366c-b97d-4e80-9d3e-148b78905158
+            type: operator
+            value: +
+            children: []
+          - id: 3b49757c-f7ca-4dcb-bfea-b50078092f43
+            type: metric
+            value: Burden - Contracts & Consulting from Bullhorn One
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Cost - Contracts & Consulting from Bullhorn One
+      - Burden - Contracts & Consulting from Bullhorn One
+    downstreamMetrics:
+      - Spread - Contracts & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Fixed Fee Weekly
+    businessId: SPREAD_FIXED_FEE_WEEKLY
+    description: Fixed Fee project spread weekly. Fixed fee monthly spread divided
+      by the number of weeks in the given month.
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(SPREAD_FIXED_FEE_MONTHLY)
+      variables:
+        - Spread - Fixed Fee Monthly
+      expressionAst:
+        id: d33e4f69-a5de-47d7-a73f-9705f927cc8d
+        type: root
+        value: root
+        children:
+          - id: 8f9d4ac0-a1f7-47b9-8ae0-710f44d8566a
+            type: function
+            value: SUM
+            children:
+              - id: f0dcba9e-cf07-4a96-86a1-39e99434ae46
+                type: metric
+                value: Spread - Fixed Fee Monthly
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Spread - Fixed Fee Monthly
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Total Stops
+    businessId: TOTAL_STOPS
+    description: null
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: null
+    implementationOwner: null
+    source: null
+    release: null
+    formula: null
+    dimensions:
+      - Account Executive
+      - Account Executive
+      - Assigned Recruiter
+      - Assigned Recruiter
+      - Candidate
+      - Company
+      - Company
+      - Contact
+      - Contact
+      - Division
+      - Domain
+      - HR Representative
+      - Match
+      - Placement
+      - Position
+      - Time Period - Day
+      - Time Period - Day
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starting Headcount Total - Monthly
+    businessId: STARTING_HEADCOUNT_TOTAL_MONTHLY
+    description: The number of active closing reports on the first day of the month
+      inclusive of contracts and consulting (excludes direct hire and fall
+      offs); Part-Time is counted as 0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(STARTING_HEADCOUNT_CONTRACT_MONTHLY,
+        STARTING_HEADCOUNT_CONSULTING_MONTHLY)
+      variables:
+        - Starting Headcount Contract - Monthly
+        - Starting Headcount Consulting - Monthly
+      expressionAst:
+        id: 0af92b16-7c6f-4890-bc6c-a5a34c46969a
+        type: root
+        value: root
+        children:
+          - id: 53b80645-b36d-48f3-be9f-78ce0d2f1b1a
+            type: function
+            value: SUM
+            children:
+              - id: f2552b97-c8f5-4b46-94a1-c3e729fa7fb6
+                type: metric
+                value: Starting Headcount Contract - Monthly
+                children: []
+              - id: b7ab909b-87fc-4dd1-ac8a-9dda0a1a2836
+                type: metric
+                value: Starting Headcount Consulting - Monthly
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Starting Headcount Contract - Monthly
+      - Starting Headcount Consulting - Monthly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Ending Headcount Total - Monthly
+    businessId: ENDING_HEADCOUNT_TOTAL_MONTHLY
+    description: The number of active closing reports on the last day of the month
+      inclusive of contracts and consulting (excludes direct hire and fall
+      offs); Part-Time is counted as 0.5.
+    unit: "#"
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(ENDING_HEADCOUNT_CONTRACT_MONTHLY,
+        ENDING_HEADCOUNT_CONSULTING_MONTHLY)
+      variables:
+        - Ending Headcount Contract - Monthly
+        - Ending Headcount Consulting - Monthly
+      expressionAst:
+        id: 6f471a77-dbb4-4f55-9815-3bf4ae2155c5
+        type: root
+        value: root
+        children:
+          - id: a7839524-49f2-41d9-9f4b-cce77b6d570b
+            type: function
+            value: SUM
+            children:
+              - id: 949c79f2-81c1-4d2d-b3c5-d4b9365dd024
+                type: metric
+                value: Ending Headcount Contract - Monthly
+                children: []
+              - id: 10662531-2d14-44d8-a8a2-33e5d69daed9
+                type: metric
+                value: Ending Headcount Consulting - Monthly
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Ending Headcount Contract - Monthly
+      - Ending Headcount Consulting - Monthly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Actual Efficiency Percentage - Weekly
+    businessId: ACTUAL_EFFICIENCY_PERCENTAGE_WEEKLY
+    description: Weekly percentage of the resource’s time they worked versus the
+      amount total hours the resource is being paid for inclusive of PTO and
+      holidays; also known as Actual Utilization, 2080 (Efficiency) %.
+    unit: "%"
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Luba Levin
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions:
+      - Candidate
+      - Candidate
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Starts Total
+    businessId: STARTS_TOTAL
+    description: Total number of closing reports with a start date in the period
+      inclusive of contract, consulting, and permanent hires
+    unit: "#"
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(STARTS_CONTRACT, STARTS_CONSULTING, STARTS_PERMANENT)
+      variables:
+        - Starts Contract
+        - Starts Consulting
+        - Starts Permanent
+      expressionAst:
+        id: bfcba42d-a668-4d50-b45d-ebe9bea06b9b
+        type: root
+        value: root
+        children:
+          - id: 1575640a-8ad0-495d-ae42-68a791d81e84
+            type: function
+            value: SUM
+            children:
+              - id: 5625c5cc-ffa6-48ea-8f14-5fe213b7a996
+                type: metric
+                value: Starts Contract
+                children: []
+              - id: 11e05c17-036c-45b3-a240-c9cd415bec4b
+                type: metric
+                value: Starts Consulting
+                children: []
+              - id: 697bf517-866f-4d5f-bd23-7e1196859eb7
+                type: metric
+                value: Starts Permanent
+                children: []
+    dimensions:
+      - Match
+      - Candidate
+      - Candidate
+      - Assigned Recruiter
+      - Assigned Recruiter
+      - HR Representative
+      - Placement
+      - Placement
+      - Domain
+      - Domain
+      - Division
+      - Division
+      - Contact
+      - Contact
+      - Company
+      - Account Executive
+    excludedDimensions: []
+    upstreamMetrics:
+      - Starts Contract
+      - Starts Consulting
+      - Starts Permanent
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: P1 Efficiency Percentage - Weekly
+    businessId: P1_EFFICIENCY_PERCENTAGE_WEEKLY
+    description: >-
+      Weekly percentage of the resource’s time scheduled to work versus the
+      amount of total hours the resource is being paid inclusive of 
+
+      PTO and Holidays; also known as P1 Utilization, 2080 (Efficiency) %
+    unit: "%"
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: P1_FORECAST_DELIVERY_HOURS_WEEKLY / EXPECTED_HOURS_WEEKLY
+      variables:
+        - P1 Forecast Delivery Hours - Weekly
+        - Expected Hours - Weekly
+      expressionAst:
+        id: 974071a7-2908-4a2c-9672-4b247728f773
+        type: root
+        value: root
+        children:
+          - id: 71edd409-395c-40a4-bf77-c1fa1dd011f7
+            type: metric
+            value: P1 Forecast Delivery Hours - Weekly
+            children: []
+          - id: 8843de6d-b1ca-4bbd-a191-200f890d8d7a
+            type: operator
+            value: /
+            children: []
+          - id: 6a4e8cd0-151f-4fec-bb1e-1b02049fe7d8
+            type: metric
+            value: Expected Hours - Weekly
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - P1 Forecast Delivery Hours - Weekly
+      - Expected Hours - Weekly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: "Actual Utilization Percentage - Weekly "
+    businessId: ACTUAL_UTILIZATION_PERCENTAGE_WEEKLY
+    description: Percentage of the resource’s time they worked versus the amount of
+      time they are available to work (excludes PTO and holidays); also known as
+      Utilization, Non-2080 (Utilization %)
+    unit: "%"
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: ACTUAL_RESOURCE_USAGE_DELIVERY_WEEKLY /
+        P1_FORECAST_UTILIZATION__INCLUDED_USAGE_WEEKLY
+      variables:
+        - Actual Resource Usage Delivery - Weekly
+        - "P1 Forecast Utilization Included Usage -  Weekly "
+      expressionAst:
+        id: d285e2cd-71de-4950-939f-bd227c349000
+        type: root
+        value: root
+        children:
+          - id: 4a44f5d0-10b6-4198-9bb6-77fda6a16f51
+            type: metric
+            value: Actual Resource Usage Delivery - Weekly
+            children: []
+          - id: df99cd61-ae3d-49ce-8f35-c3761d5cb925
+            type: operator
+            value: /
+            children: []
+          - id: 7a8b3b1c-0bec-4168-a611-e34824bf2f44
+            type: metric
+            value: "P1 Forecast Utilization Included Usage -  Weekly "
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Actual Resource Usage Delivery - Weekly
+      - "P1 Forecast Utilization Included Usage -  Weekly "
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: P1 Utilization Percentage - Weekly
+    businessId: P1_UTILIZATION_PERCENTAGE_WEEKLY
+    description: Weekly percentage of the resource’s time scheduled to work versus
+      the days they are available to work (excludes PTO and Holidays); also
+      known as P1 Utilization, Non-2080 (Utilization %)
+    unit: "%"
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: P1_FORECAST_RESOURCE_USAGE_DELIVERY_WEEKLY /
+        P1_FORECAST_UTILIZATION__INCLUDED_USAGE_WEEKLY
+      variables:
+        - P1 Forecast Resource Usage Delivery - Weekly
+        - "P1 Forecast Utilization Included Usage -  Weekly "
+      expressionAst:
+        id: 9e4f77e2-6730-47cc-b59a-a95143ef9433
+        type: root
+        value: root
+        children:
+          - id: 0a57eb33-a389-4170-b690-01a9734dffd4
+            type: metric
+            value: P1 Forecast Resource Usage Delivery - Weekly
+            children: []
+          - id: 0149d3b5-7431-41b0-9a9d-6bcd7230a02a
+            type: operator
+            value: /
+            children: []
+          - id: fb4753b2-318a-458b-8c6f-18f54ebb2447
+            type: metric
+            value: "P1 Forecast Utilization Included Usage -  Weekly "
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - P1 Forecast Resource Usage Delivery - Weekly
+      - "P1 Forecast Utilization Included Usage -  Weekly "
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Hours Billed - Weekly
+    businessId: CONSOLIDATED_HOURS_BILLED_WEEKLY
+    description: The number of weekly hours billed to the client account
+    unit: hour
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: HOURS_BILLED_ER + HOURS_BILLED_BH1 + HOURS_BILLED_FIXED_FEE_WEEKLY +
+        HOURS_BILLED_TIME_MATERIALS_WEELKLY
+      variables:
+        - Hours Billed - Contract & Consulting from Erecruit
+        - Hours Billed - Contract & Consulting from Bullhorn One
+        - Hours Billed - Fixed Fee Weekly
+        - Hours Billed - Time & Materials Weekly
+      expressionAst:
+        id: e86c64e8-4dc0-4693-a4c0-6ac46c0eed8e
+        type: root
+        value: root
+        children:
+          - id: 15c53687-d70e-426c-b4f8-e4ed4c619ec7
+            type: metric
+            value: Hours Billed - Contract & Consulting from Erecruit
+            children: []
+          - id: 2978240b-4beb-4540-8b91-81fb63758e74
+            type: operator
+            value: +
+            children: []
+          - id: e1f2cf14-5960-43d5-a966-09184e6fa4a4
+            type: metric
+            value: Hours Billed - Contract & Consulting from Bullhorn One
+            children: []
+          - id: 660895a1-5290-4be9-a701-6aab3274fd4c
+            type: operator
+            value: +
+            children: []
+          - id: 46b4680c-5a3b-4ad3-8618-28705ef34a2f
+            type: metric
+            value: Hours Billed - Fixed Fee Weekly
+            children: []
+          - id: ae076706-d361-4dd4-a8ef-fbbb290dc192
+            type: operator
+            value: +
+            children: []
+          - id: bc2ae800-c170-4898-b350-b44766dff40e
+            type: metric
+            value: Hours Billed - Time & Materials Weekly
+            children: []
+    dimensions:
+      - Timesheet
+      - Placement
+    excludedDimensions: []
+    upstreamMetrics:
+      - Hours Billed - Contract & Consulting from Erecruit
+      - Hours Billed - Contract & Consulting from Bullhorn One
+      - Hours Billed - Fixed Fee Weekly
+      - Hours Billed - Time & Materials Weekly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discounted Revenue - Contract & Consulting from Bullhorn One
+    businessId: DISC_REVENUE_CONTRACT_CONSULTING_BH1
+    description: The total income generated from providing staffing services and
+      consulting engagements to clients after discount is applied. It includes
+      all billings for the placement of temporary or contract staff, permanent
+      hires (placement fees), and fees for professional consulting services
+      delivered from Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn One
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: FULL_REVENUE_CONTRACTS_CONSULTING_BH1 -
+        DISC_AMOUNT_CONTRACTS_CONSULTING_BH1
+      variables:
+        - Full Revenue - Contracts & Consulting from Bullhorn One
+        - Discount Amount - Contracts & Consulting from Bullhorn One
+      expressionAst:
+        id: 868b0b5b-1476-4062-b9c9-318b028a81ba
+        type: root
+        value: root
+        children:
+          - id: e07a8253-b683-4797-a426-8d762ea94038
+            type: metric
+            value: Full Revenue - Contracts & Consulting from Bullhorn One
+            children: []
+          - id: 89e142c4-1a31-419a-8931-8778a84b4266
+            type: operator
+            value: "-"
+            children: []
+          - id: a5e3c7d7-f11e-4040-b0ea-af28ef4d0fa3
+            type: metric
+            value: Discount Amount - Contracts & Consulting from Bullhorn One
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue - Contracts & Consulting from Bullhorn One
+      - Discount Amount - Contracts & Consulting from Bullhorn One
+    downstreamMetrics:
+      - Consolidated Revenue - Monthly
+      - Consolidated Revenue - Weekly
+      - Spread - Contracts & Consulting from Bullhorn One
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Discounted Revenue
+    businessId: DISCOUNTED_REVENUE
+    description: The total income generated from providing staffing services and
+      consulting engagements to clients after discount is applied. It includes
+      all billings for the placement of temporary or contract staff, permanent
+      hires (placement fees), and fees for professional consulting services
+      delivered
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: REV_BEFORE_DISC - DISC_AMOUNT
+      variables:
+        - Full Revenue - Contract & Consulting Monthly
+        - Discount Amount
+      expressionAst:
+        id: d09327f0-f0d7-428c-87ac-09b1f108e98d
+        type: root
+        value: root
+        children:
+          - id: eb271575-4178-43c6-a238-76ba62441bd5
+            type: metric
+            value: Full Revenue - Contract & Consulting Monthly
+            children: []
+          - id: 4092c126-d5ef-4009-9a49-1212dc47de96
+            type: operator
+            value: "-"
+            children: []
+          - id: c35dc068-7bf8-4a88-9b47-23b708e242cc
+            type: metric
+            value: Discount Amount
+            children: []
+    dimensions:
+      - Record Type
+      - Segment
+      - Division
+      - Domain
+      - Company
+      - Account Executive
+      - Candidate
+      - Parent Company
+    excludedDimensions: []
+    upstreamMetrics:
+      - Full Revenue - Contract & Consulting Monthly
+      - Discount Amount
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics:
+      - Full Revenue - Contract & Consulting Monthly
+  - name: Consolidated Cost - Weekly
+    businessId: CONSOLIDATED_COST_WEEKLY
+    description: Total weekly cost for contract and consulting, fixed fee, and time
+      and materials engagements.
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: COST_CONTRACTS_CONSULTING_BH1 + COST_CONTRACTS_CONSULTING_ER +
+        COST_FIXED_FEE_WEEKLY + COST_TIME_MATERIALS_WEEKLY
+      variables:
+        - Cost - Contracts & Consulting from Bullhorn One
+        - Cost - Contracts & Consulting from Erecruit
+        - Cost - Fixed Fee Weekly
+        - Cost - Time & Materials Weekly
+      expressionAst:
+        id: 59be8f00-2fcd-4983-a259-e3353f0414cf
+        type: root
+        value: root
+        children:
+          - id: a5f66213-567e-4c8e-a5c7-7e82e3e37275
+            type: metric
+            value: Cost - Contracts & Consulting from Bullhorn One
+            children: []
+          - id: 4cc16247-cbcb-40b8-a0db-7474160bb639
+            type: operator
+            value: +
+            children: []
+          - id: 1135413e-5f30-45ae-bf09-44e9d41e71b4
+            type: metric
+            value: Cost - Contracts & Consulting from Erecruit
+            children: []
+          - id: a09e7926-eb70-4a64-8a00-4e9f7a8e1ca2
+            type: operator
+            value: +
+            children: []
+          - id: 56ff6ed1-bc67-43ee-a973-81a2d1ace001
+            type: metric
+            value: Cost - Fixed Fee Weekly
+            children: []
+          - id: acff85e5-f15f-4e6b-9efc-44086843450f
+            type: operator
+            value: +
+            children: []
+          - id: 6ceb5138-7af1-4bb8-afee-10c247c3a94b
+            type: metric
+            value: Cost - Time & Materials Weekly
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Cost - Contracts & Consulting from Bullhorn One
+      - Cost - Contracts & Consulting from Erecruit
+      - Cost - Fixed Fee Weekly
+      - Cost - Time & Materials Weekly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Revenue - Monthly
+    businessId: CONSOLIDATED_REVENUE_MONTHLY
+    description: "Monthly revenue from all sources after discount where discounts apply "
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(DISC_REVENUE_CONTRACT_CONSULTING_BH1,
+        DISC_REVENUE_CONTRACT_CONSULTING_ER, DISC_REVENUE_P1,
+        FULL_REVENUE_PERM_BH1, FULL_REVENUE_PERM_ER)
+      variables:
+        - Discounted Revenue - Contract & Consulting from Bullhorn One
+        - Discounted Revenue - Contract & Consulting from Erecruit
+        - Discounted Revenue - P1
+        - Full Revenue - Permanent Placements from Bullhorn One
+        - Full Revenue - Permanent Placements from Erecruit
+      expressionAst:
+        id: 8f14b654-9927-47ae-93a2-ba67e7b79900
+        type: root
+        value: root
+        children:
+          - id: 8bd0f6d3-fb89-4f58-8bbe-cd32de9473cf
+            type: function
+            value: SUM
+            children:
+              - id: ddb64ee0-b710-4302-8663-5f1c486ca336
+                type: metric
+                value: Discounted Revenue - Contract & Consulting from Bullhorn One
+                children: []
+              - id: d7370e19-62e3-4fd1-b34c-dc8ae675c9b4
+                type: metric
+                value: Discounted Revenue - Contract & Consulting from Erecruit
+                children: []
+              - id: 48ebdf94-d4f9-4f14-988b-160cde278d56
+                type: metric
+                value: Discounted Revenue - P1
+                children: []
+              - id: b0dc584a-b81f-452e-bb18-05150bc45826
+                type: metric
+                value: Full Revenue - Permanent Placements from Bullhorn One
+                children: []
+              - id: 2217a979-850f-473b-a1bc-9e9008a9b65a
+                type: metric
+                value: Full Revenue - Permanent Placements from Erecruit
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+      - Discounted Revenue - Contract & Consulting from Erecruit
+      - Discounted Revenue - P1
+      - Full Revenue - Permanent Placements from Bullhorn One
+      - Full Revenue - Permanent Placements from Erecruit
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Revenue - Weekly
+    businessId: CONSOLIDATED_REVENUE_WEEKLY
+    description: Weekly revenue from all sources after discount (where discounts apply)
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(DISC_REVENUE_CONTRACT_CONSULTING_BH1,
+        DISC_REVENUE_CONTRACT_CONSULTING_ER, DISC_REVENUE_TM_WEEKLY,
+        FULL_REVENUE_FIXED_FEE_WEEKLY, FULL_REVENUE_PERM_BH1,
+        FULL_REVENUE_PERM_ER)
+      variables:
+        - Discounted Revenue - Contract & Consulting from Bullhorn One
+        - Discounted Revenue - Contract & Consulting from Erecruit
+        - Discounted Revenue -Time & Materials Weekly
+        - Full Revenue - Fixed Fee Weekly
+        - Full Revenue - Permanent Placements from Bullhorn One
+        - Full Revenue - Permanent Placements from Erecruit
+      expressionAst:
+        id: 2d347c90-d22c-474f-ad7b-7f26b2522e01
+        type: root
+        value: root
+        children:
+          - id: 78a4c586-9db7-4532-b748-f6dd78bdbb7e
+            type: function
+            value: SUM
+            children:
+              - id: b8a88e29-07de-4fd4-a164-dce8068a4a99
+                type: metric
+                value: Discounted Revenue - Contract & Consulting from Bullhorn One
+                children: []
+              - id: 7b9ca435-bdb8-49a4-ba39-7dde6105ecb2
+                type: metric
+                value: Discounted Revenue - Contract & Consulting from Erecruit
+                children: []
+              - id: 5e954b42-6a23-42f9-bece-736d3abca8c7
+                type: metric
+                value: Discounted Revenue -Time & Materials Weekly
+                children: []
+              - id: ce4d76df-5f63-4eee-a4df-fe08f8a35222
+                type: metric
+                value: Full Revenue - Fixed Fee Weekly
+                children: []
+              - id: e5d4e1b4-bae0-4f06-b57c-7f19f82bacc2
+                type: metric
+                value: Full Revenue - Permanent Placements from Bullhorn One
+                children: []
+              - id: d04d7eb4-ccf8-417b-9b23-e633dcffed38
+                type: metric
+                value: Full Revenue - Permanent Placements from Erecruit
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+      - Discounted Revenue - Contract & Consulting from Erecruit
+      - Discounted Revenue -Time & Materials Weekly
+      - Full Revenue - Fixed Fee Weekly
+      - Full Revenue - Permanent Placements from Bullhorn One
+      - Full Revenue - Permanent Placements from Erecruit
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Spread - Contracts & Consulting from Bullhorn One
+    businessId: SPREAD_CONTRACTS_CONSULTING_BH1
+    description: Profit margin—calculated as discounted revenue minus loaded
+      cost—measures the true financial gain from staffing placements by showing
+      how much value remains after covering all fully loaded labor expenses from
+      Bullhorn One
+    unit: $
+    status: Draft
+    period: Ongoing
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: null
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: DISC_REVENUE_CONTRACT_CONSULTING_BH1 -
+        LOADED_COST_CONTRACTS_CONSULTING_BH1
+      variables:
+        - Discounted Revenue - Contract & Consulting from Bullhorn One
+        - Loaded Cost - Contracts & Consulting from Bullhorn One
+      expressionAst:
+        id: 8dfde7a7-05ea-4ff9-bc3d-347e40576357
+        type: root
+        value: root
+        children:
+          - id: 28ac25a2-dd1f-4ddb-8450-b0ea35e05719
+            type: metric
+            value: Discounted Revenue - Contract & Consulting from Bullhorn One
+            children: []
+          - id: fef572c9-f6fc-4b81-b5cd-8faadbe0a7e6
+            type: operator
+            value: "-"
+            children: []
+          - id: 79855672-8cec-41f6-b5d2-576965d0fe63
+            type: metric
+            value: Loaded Cost - Contracts & Consulting from Bullhorn One
+            children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Discounted Revenue - Contract & Consulting from Bullhorn One
+      - Loaded Cost - Contracts & Consulting from Bullhorn One
+    downstreamMetrics:
+      - Consolidated Spread - Weekly
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Spread - Weekly
+    businessId: CONSOLIDATED_SPREAD_WEEKLY
+    description: Weekly profit margin—calculated as discounted revenue minus cost or
+      loaded cost where applicable—measures the true financial gain from
+      contract and consulting, fixed fee, and time and materials engagements
+    unit: $
+    status: Draft
+    period: Weekly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Kantata for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula:
+      pretty: SUM(SPREAD_CONTRACTS_CONSULTING_ER, SPREAD_CONTRACTS_CONSULTING_BH1,
+        SPREAD_PERM_ER, SPREAD_PERM_BH1, SPREAD_FIXED_FEE_WEEKLY,
+        SPREAD_TM_WEEKLY)
+      variables:
+        - Spread - Contracts & Consulting from Erecruit
+        - Spread - Contracts & Consulting from Bullhorn One
+        - Spread - Permanent Placements from Erecruit
+        - Spread - Permanent Placements from Bullhorn One
+        - Spread - Fixed Fee Weekly
+        - Spread - Time & Materials Weekly
+      expressionAst:
+        id: bcaf50ea-b8e4-42e0-9efb-4d043ad959eb
+        type: root
+        value: root
+        children:
+          - id: f1670b85-5877-4b7d-be52-9b6d49a6dad1
+            type: function
+            value: SUM
+            children:
+              - id: 9baebd1c-247e-4831-8f49-6ae6aef7835e
+                type: metric
+                value: Spread - Contracts & Consulting from Erecruit
+                children: []
+              - id: 5f916fb9-2fba-429a-99bf-c64562d3c2ab
+                type: metric
+                value: Spread - Contracts & Consulting from Bullhorn One
+                children: []
+              - id: 904e20d4-32ba-419f-b7a8-dd8e21b5127c
+                type: metric
+                value: Spread - Permanent Placements from Erecruit
+                children: []
+              - id: b1f2f706-4df6-4668-961b-f8b1e1a959e0
+                type: metric
+                value: Spread - Permanent Placements from Bullhorn One
+                children: []
+              - id: 7825946b-4afa-4049-9a55-b640a5a02277
+                type: metric
+                value: Spread - Fixed Fee Weekly
+                children: []
+              - id: 35dcae6c-00d8-4545-8d8b-75a94718ce6d
+                type: metric
+                value: Spread - Time & Materials Weekly
+                children: []
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics:
+      - Spread - Contracts & Consulting from Erecruit
+      - Spread - Contracts & Consulting from Bullhorn One
+      - Spread - Permanent Placements from Erecruit
+      - Spread - Permanent Placements from Bullhorn One
+      - Spread - Fixed Fee Weekly
+      - Spread - Time & Materials Weekly
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
+  - name: Consolidated Spread - Monthly
+    businessId: CONSOLIDATED_SPREAD_MONTHLY
+    description: Monthly profit margin—calculated as discounted revenue minus cost
+      or loaded cost where applicable—measures the true financial gain from
+      contract and consulting, fixed fee, and time and materials engagements
+    unit: $
+    status: Draft
+    period: Monthly
+    businessOwner: Luba Levin
+    implementationOwner: Ross Karnes
+    source: Bullhorn for Salesforce
+    release: ELIASSEN_INFOMART_V1.0
+    formula: null
+    dimensions: []
+    excludedDimensions: []
+    upstreamMetrics: []
+    downstreamMetrics: []
+    impactedMetrics: []
+    impactingMetrics: []
